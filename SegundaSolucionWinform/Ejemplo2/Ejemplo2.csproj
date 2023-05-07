@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CALCULADORA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CALCULADORA.Designer.cs">
+      <DependentUpon>CALCULADORA.cs</DependentUpon>
+    </Compile>
     <Compile Include="EJEMPLO-FECHAS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="Persona.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CALCULADORA.resx">
+      <DependentUpon>CALCULADORA.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EJEMPLO-FECHAS.resx">
       <DependentUpon>EJEMPLO-FECHAS.cs</DependentUpon>
     </EmbeddedResource>

@@ -38,9 +38,13 @@ namespace Ejemplo2
         private void fechasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (var item in Application.OpenForms)
-            { if (item.GetType() == typeof(EJEMPLO_FECHAS))
+
+            { 
+                if (item.GetType() == typeof(EJEMPLO_FECHAS))
                 {
                     MessageBox.Show("Termine de trabajar en la ventana actual");
+
+                    return;
 
                 }
                 
@@ -49,6 +53,44 @@ namespace Ejemplo2
             EJEMPLO_FECHAS fecha = new EJEMPLO_FECHAS();
             fecha.MdiParent = this;
             fecha.Show();
+        }
+
+        private void ecepcionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(EXCEPCIONES))
+                {
+                    MessageBox.Show("Termine de trabajar en la ventana actual");
+
+                    return;
+
+                }
+
+
+            }
+            EXCEPCIONES excepciones = new EXCEPCIONES();
+           excepciones.MdiParent = this;
+            excepciones.Show();
+        }
+
+        private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(CALCULADORA))
+                {
+                    MessageBox.Show("Termine de trabajar en la ventana actual");
+
+                    return;
+
+                }
+
+
+            }
+            CALCULADORA calculadora = new CALCULADORA();
+            calculadora.MdiParent = this;
+            calculadora.Show();
         }
     }
 }
